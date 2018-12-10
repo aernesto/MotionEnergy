@@ -1,6 +1,6 @@
 
 %% example 1: filter plots
-
+clear
 load high_coh_right
 % rearrange dimensions
 stim = permute(S,[3,2,1]);%time,irrel,rel
@@ -8,6 +8,8 @@ sf = 75;
 motion_energy = motionenergy.motionfilter(stim,sf,'sigmac',0.5,'doplot',1);
 
 %% example 2: a few trials
+clear
+
 files = {'high_coh_right','low_coh_right','low_coh_left','high_coh_left'};
 sf = 75;
 for i=1:length(files)
